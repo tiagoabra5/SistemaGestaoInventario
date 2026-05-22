@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 import com.tiago.Sistema.service.ProductService;
+import com.tiago.Sistema.dto.ProductRequestDTO;
+import com.tiago.Sistema.dto.ProductResponseDTO;
 import com.tiago.Sistema.entity.Product;
 import lombok.RequiredArgsConstructor;
 
@@ -46,15 +48,15 @@ public class ProductController {
 
     //criar/cadastrar produto
     @PostMapping
-    public ResponseEntity<Product> createProduct(@RequestBody Product product){
-        Product newProduct = ps.createProduct(product);
+    public ResponseEntity<ProductResponseDTO> createProduct(@RequestBody ProductRequestDTO dto){
+        ProductResponseDTO newProduct = ps.createProduct(dto);
         return ResponseEntity.ok(newProduct);
     }
 
     //atualizar produto
     @PutMapping("/{id}")
-    public ResponseEntity<Product> updateProduct(@PathVariable Long id,  @RequestBody Product product){
-        Product updatedProduct = ps.updateProduct(id, product);
+    public ResponseEntity<Product> updateProduct(@PathVariable Long id,  @RequestBody ProductRequestDTO dto){
+        Product updatedProduct = ps.updateProduct(id, dto);
         return ResponseEntity.ok(updatedProduct);
     }
 
