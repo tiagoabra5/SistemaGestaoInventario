@@ -1,0 +1,45 @@
+<main class="container">
+  <header class="page-header">
+    <h1>Sistema de Gestão de Inventário</h1>
+    <p>Gerencie os produtos cadastrados no estoque.</p>
+  </header>
+
+  <section>
+    <div class="section-header">
+      <h2>Produtos cadastrados</h2>
+      <span>{{ products().length }} produto(s)</span>
+    </div>
+
+    @if (products().length === 0) {
+      <p>Nenhum produto cadastrado.</p>
+    }
+
+    <div class="products-grid">
+      @for (product of products(); track product.id) {
+        <div class="product-card">
+          <h3>{{ product.name }}</h3>
+
+          <p>
+            <strong>Descrição:</strong>
+            {{ product.description }}
+          </p>
+
+          <p>
+            <strong>Preço:</strong>
+            R$ {{ product.price }}
+          </p>
+
+          <p>
+            <strong>Quantidade:</strong>
+            {{ product.quantity }}
+          </p>
+
+          <p>
+            <strong>Criado em:</strong>
+            {{ product.createdAt }}
+          </p>
+        </div>
+      }
+    </div>
+  </section>
+</main>
