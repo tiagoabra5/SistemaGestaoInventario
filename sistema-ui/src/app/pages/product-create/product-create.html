@@ -1,1 +1,52 @@
-<p>product-create works!</p>
+<main class="container">
+    <header class="page-header">
+      <h1>Sistema de Gestão de Inventário</h1>
+      <p>Cadastre os produtos no estoque.</p>
+    </header>
+  
+    <form (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <mat-label>Nome do produto</mat-label>
+        <input
+          matInput
+          type="text"
+          name="name"
+          [(ngModel)]="newProduct.name"
+        >
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Descrição</mat-label>
+        <input
+          matInput
+          type="text"
+          name="description"
+          [(ngModel)]="newProduct.description"
+        >
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Preço</mat-label>
+        <input
+          matInput
+          type="number"
+          name="price"
+          [(ngModel)]="newProduct.price"
+        >
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Quantidade</mat-label>
+        <input
+          matInput
+          type="number"
+          name="quantity"
+          [(ngModel)]="newProduct.quantity"
+        >
+      </mat-form-field>
+  
+      <button mat-raised-button type="submit">
+        Salvar
+      </button>
+    </form>
+  </main>
