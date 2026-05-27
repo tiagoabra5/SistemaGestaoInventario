@@ -1,0 +1,58 @@
+<main class="container">
+    <header class="page-header">
+      <h1>Editar produto</h1>
+      <p>Atualize as informações do produto cadastrado.</p>
+    </header>
+  
+    <form (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <mat-label>Nome do produto</mat-label>
+        <input
+          matInput
+          type="text"
+          name="name"
+          [(ngModel)]="product.name"
+        >
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Descrição</mat-label>
+        <input
+          matInput
+          type="text"
+          name="description"
+          [(ngModel)]="product.description"
+        >
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Preço</mat-label>
+        <input
+          matInput
+          type="number"
+          name="price"
+          [(ngModel)]="product.price"
+        >
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Quantidade</mat-label>
+        <input
+          matInput
+          type="number"
+          name="quantity"
+          [(ngModel)]="product.quantity"
+        >
+      </mat-form-field>
+  
+      <div class="form-actions">
+        <button mat-raised-button type="submit">
+          Salvar alterações
+        </button>
+  
+        <a mat-button routerLink="/products">
+          Cancelar
+        </a>
+      </div>
+    </form>
+  </main>

@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+
+import { ProductService } from '../../services/ProductService';
 
 @Component({
   selector: 'app-product-create',
@@ -24,7 +27,20 @@ export class ProductCreate {
     quantity: 0
   };
 
+  constructor(
+    private productService: ProductService,
+    private router: Router
+  ) {}
+
   onSubmit(): void {
-    console.log('Produto digitado:', this.newProduct);
+    this.productService.createProduct(this.newProduct).subscribe({
+      next: (product) => {
+        console.log('Produto cadastrado com sucesso:', product);
+        this.router.navigate(['/products']);
+      },
+      error: (error) => {
+        console.error('Erro ao cadastrar produto:', error);
+      }
+    });
   }
 }
