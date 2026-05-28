@@ -10,7 +10,7 @@
 
 Este é um projeto fullstack de **Sistema de Gestão de Inventário**, desenvolvido com **Spring Boot** no backend e **Angular** no frontend.
 
-O projeto tem como objetivo simular um sistema real de controle de estoque, permitindo o gerenciamento de produtos por meio de operações CRUD, ou seja, criação, listagem, atualização e exclusão de produtos.
+O projeto tem como objetivo simular um sistema real de controle de estoque, permitindo o gerenciamento de produtos por meio de operações CRUD: criação, listagem, atualização e exclusão de produtos.
 
 A aplicação foi desenvolvida com foco em praticar conceitos importantes de desenvolvimento fullstack, como criação de API REST, organização em camadas, persistência de dados com JPA/Hibernate, uso de DTOs, tratamento de exceções, integração entre frontend e backend e construção de interface com Angular Material.
 
