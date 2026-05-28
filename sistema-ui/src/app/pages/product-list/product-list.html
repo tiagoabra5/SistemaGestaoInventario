@@ -1,3 +1,4 @@
+<link rel="icon" type="image/x-icon" href="/sistema-ui/public/favicon.ico">
 <main class="container">
   <header class="page-header">
     <div>
@@ -46,7 +47,7 @@
 
         <ng-container matColumnDef="price">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Preço</th>
-          <td mat-cell *matCellDef="let product">R$ {{ product.price }}</td>
+          <td mat-cell *matCellDef="let product">R$ {{ product.price | number:'1.2-2' }}</td>
         </ng-container>
 
         <ng-container matColumnDef="quantity">
@@ -56,20 +57,22 @@
 
         <ng-container matColumnDef="createdAt">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Criado em</th>
-          <td mat-cell *matCellDef="let product">{{ product.createdAt }}</td>
+          <td mat-cell *matCellDef="let product">{{ product.createdAt | date:'dd/MM/yyyy' }}</td>
         </ng-container>
 
         <ng-container matColumnDef="actions">
           <th mat-header-cell *matHeaderCellDef>Ações</th>
-
+        
           <td mat-cell *matCellDef="let product">
-            <button mat-button [routerLink]="['/products/edit', product.id]">
-              Editar
-            </button>
-
-            <button mat-button color="warn" (click)="deleteProduct(product.id)">
-              Excluir
-            </button>
+            <div class="actions">
+              <button   mat-icon-button [routerLink]="['/products/edit', product.id]" aria-label="Editar produto">
+                <mat-icon>edit</mat-icon>
+              </button>
+        
+              <button mat-icon-button color="warn" (click)="deleteProduct(product.id)" aria-label="Excluir produto">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
           </td>
         </ng-container>
 

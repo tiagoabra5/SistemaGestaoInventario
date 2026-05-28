@@ -7,6 +7,9 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { DatePipe } from '@angular/common';
+import { DecimalPipe } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 
 import { Product } from '../../models/product';
 import { ProductService } from '../../services/ProductService';
@@ -20,7 +23,10 @@ import { ProductService } from '../../services/ProductService';
     MatSortModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    DatePipe,
+    DecimalPipe,
+    MatIconModule
   ],
   templateUrl: './product-list.html',
   styleUrl: './product-list.scss',
