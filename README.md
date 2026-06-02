@@ -67,7 +67,12 @@ npm install
 ```bash
 npx.cmd ng serve
 ```
-O aplicativo estará disponível em http://localhost:4200
+  caso o comando acima não funcione, tente esse abaixo:
+```bash
+npx ng serve
+```
+Após executar todos os passos corretamente, o aplicativo estará disponível em `http://localhost:4200`
+
 
 ## Autor
 
