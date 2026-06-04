@@ -66,15 +66,10 @@
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!--dependency temporaria do sqlite enquanto nao configuro o Postgresql-->
 		<dependency>
-    		<groupId>org.xerial</groupId>
-    		<artifactId>sqlite-jdbc</artifactId>
-    		<version>3.53.1.0</version>
-		</dependency>
-		<dependency>
-    		<groupId>org.hibernate.orm</groupId>
-    		<artifactId>hibernate-community-dialects</artifactId>
+    		<groupId>org.postgresql</groupId>
+    		<artifactId>postgresql</artifactId>
+    		<scope>runtime</scope>
 		</dependency>
 	</dependencies>
 
