@@ -1,12 +1,13 @@
-<img src="https://img.shields.io/badge/STATUS-EM DESENVOLVIMENTO-orange"/>
+<img src="https://img.shields.io/badge/STATUS-CONCLUÍDO-brighgreen"/>
 
 # Sistema de Gestão de Inventário
 
-![java](https://img.shields.io/badge/-Java-white?style=for-the-badge&logo=openjdk&color=000000&logoColor=white)
+![java](https://img.shields.io/badge/-Java-white?style=for-the-badge&logo=openjdk&color=ff9340&logoColor=white)
 ![spring](https://img.shields.io/badge/-Spring_Boot-white?style=for-the-badge&logo=Spring-Boot&color=6DB33F&logoColor=white)
 ![angular](https://img.shields.io/badge/-Angular-white?style=for-the-badge&logo=angular&color=DD0031&logoColor=white)
 ![typescript](https://img.shields.io/badge/-TypeScript-white?style=for-the-badge&logo=typescript&color=3178C6&logoColor=white)
-![sqlite](https://img.shields.io/badge/-SQLite-white?style=for-the-badge&logo=sqlite&color=003B57&logoColor=white)
+![postgresql](https://img.shields.io/badge/-PostgreSQL-white?style=for-the-badge&logo=postgresql&color=4169E1&logoColor=white)
+![docker](https://img.shields.io/badge/-Docker-white?style=for-the-badge&logo=docker&color=2496ED&logoColor=white)
 
 Este é um projeto fullstack de **Sistema de Gestão de Inventário**, desenvolvido com **Spring Boot** no backend e **Angular** no frontend.
 
@@ -28,30 +29,61 @@ A API oferece os seguintes endpoints para gerenciamento de produtos:
 
 ## Como executar o projeto
 
-### Primeiro rodar o back-end:
+### Pré-requisitos
 
-1. Clone este repositório para o seu ambiente de desenvolvimento:
+Antes de iniciar, verifique se você possui instalado:
 
+- Git
+- Java 21 ou superior
+- Node.js
+- npm
+- Docker
+- Docker Compose
+
+## 1. Clone o repositório
+
+Clone este repositório para o seu ambiente de desenvolvimento:
 ```bash
 git clone https://github.com/tiagoabra5/SistemaGestaoInventario.git
 ```
-2. Navegue até o diretório do projeto:
+Após clonar o repositório, entre na pasta principal do projeto:
+```bash
+cd SistemaGestaoInventario/
+```
+
+## 2. Rode o banco de dados:
+
+Antes de iniciar o back-end, é necessário subir o banco de dados PostgreSQL pelo Docker.
+
+Na raiz do projeto, onde está o arquivo `docker-compose.yml`, execute:
+
+```bash
+sudo docker compose up -d
+```
+Caso esteja usando Docker sem `sudo`, execute:
+```bash
+docker compose up -d
+```
+
+## 3. Rode o back-end:
+
+1. Navegue até o diretório do projeto:
 
 ```bash
 cd Sistema/
 ```
-3. Execute o aplicativo Spring Boot usando o Maven:
+2. Execute o aplicativo Spring Boot usando o Maven:
 
-  terminal
-```bash
-mvnw.cmd spring-boot:run
-```
-  se o primeiro não funcionar, tente esse:
+  terminal:
 ```bash
 mvnw spring-boot:run
 ```
+  se o primeiro não funcionar, tente esse:
+```bash
+mvnw.cmd spring-boot:run
+```
 
-### Depois de rodar o back-end, precisa rodar o front-end:
+## 4. Rode o front-end:
 
 1. Navegue até o diretório do projeto:
 
@@ -60,20 +92,21 @@ cd sistema-ui/
 ```
 2. Execute o frontend Angular usando o npm:
 
-  execute nessa ordem:
+  Instale as dependências do projeto Angular:
 ```bash
 npm install 
 ```
+Execute o front-end Angular usando o npm.
 ```bash
-npx.cmd ng serve
+npx ng serve
 ```
   caso o comando acima não funcione, tente esse abaixo:
 ```bash
-npx ng serve
+npx.cmd ng serve
 ```
 Após executar todos os passos corretamente, o aplicativo estará disponível em `http://localhost:4200`
 
 
 ## Autor
 
-Este projeto foi desenvolvido por Tiago Abraão com o objetivo de estudar e praticar desenvolvimento fullstack, utilizando Java, Spring Boot, Angular, TypeScript e banco de dados relacional. Além de funcionar como um sistema de gestão de inventário, o projeto também foi criado para aprofundar meus conhecimentos em Java, API REST, JPA/Hibernate, integração entre frontend e backend e construção de aplicações.
+Este projeto foi desenvolvido por Tiago Abraão com o objetivo de estudar e praticar desenvolvimento fullstack, utilizando Java, Spring Boot, Angular, TypeScript, Docker e banco de dados relacional. Além de funcionar como um sistema de gestão de inventário, o projeto também foi criado para aprofundar meus conhecimentos em Java, API REST, JPA/Hibernate, integração entre frontend e backend, Docker, PostgreSQL e construção de aplicações.
