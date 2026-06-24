@@ -1,4 +1,4 @@
-<img src="https://img.shields.io/badge/STATUS-CONCLUÍDO-brighgreen"/>
+<img src="https://img.shields.io/badge/STATUS-EM DESENVOLVIMENTO-orange"/>
 
 # Sistema de Gestão de Inventário
 
