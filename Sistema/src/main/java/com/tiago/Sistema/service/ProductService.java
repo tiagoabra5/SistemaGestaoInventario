@@ -40,12 +40,6 @@ public class ProductService {
         return this.pr.findAll();
     }
 
-    //save produto - antigo - antes do dto
-    /*public Product createProduct(ProductRequestDTO dto){
-        dto.setCreatedAt(LocalDateTime.now());
-        return this.pr.save(dto);
-    }*/
-
     //save produto - novo - para o dto
     public ProductResponseDTO createProduct(ProductRequestDTO dto) {
         Product product = new Product();
@@ -76,6 +70,7 @@ public class ProductService {
         this.pr.delete(product);
     }
 
+    //criar toResponseDTO
     private ProductResponseDTO toResponseDTO(Product product){
         return new ProductResponseDTO(
             product.getId(),
