@@ -1,6 +1,6 @@
 <img src="https://img.shields.io/badge/STATUS-EM DESENVOLVIMENTO-orange"/>
 
-# Sistema de Gestão de Inventário
+# Sistema de Gestão de Inventário v2
 
 ![java](https://img.shields.io/badge/-Java-white?style=for-the-badge&logo=openjdk&color=ff9340&logoColor=white)
 ![spring](https://img.shields.io/badge/-Spring_Boot-white?style=for-the-badge&logo=Spring-Boot&color=6DB33F&logoColor=white)
@@ -11,9 +11,7 @@
 
 Este é um projeto fullstack de **Sistema de Gestão de Inventário**, desenvolvido com **Spring Boot** no backend e **Angular** no frontend.
 
-O projeto tem como objetivo simular um sistema real de controle de estoque, permitindo o gerenciamento de produtos por meio de operações CRUD: criação, listagem, atualização e exclusão de produtos.
-
-A aplicação foi desenvolvida com foco em praticar conceitos importantes de desenvolvimento fullstack, como criação de API REST, organização em camadas, persistência de dados com JPA/Hibernate, uso de DTOs, tratamento de exceções, integração entre frontend e backend e construção de interface com Angular Material.
+* atualizar o resumo do projeto *
 
 ## Endpoints da API
 
