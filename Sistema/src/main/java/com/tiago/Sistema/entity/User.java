@@ -6,7 +6,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Table(name = "user")
+@Table(name = "app_user")
 @Entity
 @Getter
 @Setter
@@ -28,7 +28,7 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Enumerated(EnumType.STRING)
+    //@Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private String role;
 
